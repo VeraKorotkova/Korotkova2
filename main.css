@@ -1,0 +1,119 @@
+ /* Общие стили для всего документа */
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #f39c12, #b2dfdb);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #000; /* Черный цвет текста */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(45deg, #f39c12, #b2dfdb);
+    background-size: 200% 200%;
+    animation: headerGradient 10s ease infinite;
+    color: #000; /* Черный цвет текста */
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 10px;
+}
+
+@keyframes headerGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Основное содержание */
+main {
+    padding: 20px;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+   
+}
+
+.cat-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    
+}
+.cat-description {
+    background-color: #ffc0cb;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.cat-img{
+    border-radius: 15px;
+    margin-left: 25px;
+    margin-right: 15px;
+    flex-basis: auto;
+    flex-grow: 0;
+    }
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+@media screen and (max-width:1000px) { 
+    .cat-card {
+        flex-wrap: wrap;
+                   }
+    .cat-description {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        flex-grow: 0;
+        flex-basis: auto;
+        max-width: 440px;
+    }
+    .cat-img{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        flex-shrink: 1;
+        overflow: hidden;
+    }   
+    img{
+        width: 100%;
+    }         
+    
+}
